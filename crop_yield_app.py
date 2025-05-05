@@ -24,7 +24,7 @@ def create_model():
         'Region': np.random.choice(regions, n_samples),
         'Rainfall': np.random.uniform(100, 300, n_samples),
         'Temperature': np.random.uniform(20, 35, n_samples),
-        'Fertilizer': np.random.uniform(20, 100, n_samples),
+        'Fertilizer': np.random.uniform(20, 300, n_samples),
     })
 
     data['Yield (kg/ha)'] = (
