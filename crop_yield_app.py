@@ -22,7 +22,7 @@ def create_model():
         'Crop': np.random.choice(crops, n_samples),
         'Soil Type': np.random.choice(soils, n_samples),
         'Region': np.random.choice(regions, n_samples),
-        'Rainfall': np.random.uniform(100, 300, n_samples),
+        'Rainfall': np.random.uniform(100, 3000, n_samples),
         'Temperature': np.random.uniform(20, 35, n_samples),
         'Fertilizer': np.random.uniform(20, 300, n_samples),
     })
@@ -61,9 +61,9 @@ crop = st.selectbox("Select Crop", ['Wheat', 'Rice', 'Maize'])
 soil = st.selectbox("Select Soil Type", ['Loamy', 'Clay', 'Sandy'])
 region = st.selectbox("Select Region", ['North', 'South', 'East', 'West'])
 
-rainfall = st.slider("Rainfall (mm)", 100, 300, 180)
+rainfall = st.slider("Rainfall (mm)", 100, 3000, 180)
 temperature = st.slider("Temperature (°C)", 15, 40, 28)
-fertilizer = st.slider("Fertilizer Used (kg/ha)", 10, 100, 50)
+fertilizer = st.slider("Fertilizer Used (kg/ha)", 10, 300, 50)
 
 # Prediction
 if st.button("Predict Yield"):
